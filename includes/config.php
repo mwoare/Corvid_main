@@ -7,7 +7,13 @@
 // Site Information
 define('SITE_NAME', 'Corvid Tax');
 define('SITE_TAGLINE', 'Tax Preparation, Planning, and Representation');
-define('SITE_URL', 'http://localhost/corvidtax');
+
+// Dynamically detect site URL (works on both local and production)
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$script_path = dirname($_SERVER['SCRIPT_NAME']);
+$base_path = ($script_path == '/' || $script_path == '\\') ? '' : $script_path;
+define('SITE_URL', rtrim($protocol . $host . $base_path, '/'));
 
 // Contact Information
 define('COMPANY_EMAIL', 'taxhelp@corvidtax.com');

@@ -1,0 +1,240 @@
+/**
+ * Corvid Tax LLC - Custom Styles
+ * Color scheme inspired by Steller's Jay logo: blues (medium blue, navy), with black accents
+ */
+
+:root {
+    --primary-blue: #0066cc;
+    --navy-blue: #003366;
+    --medium-blue: #4a90e2;
+    --light-blue: #e6f2ff;
+    --dark-gray: #333333;
+    --light-gray: #f8f9fa;
+    --black: #000000;
+}
+
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Logo Styling */
+.logo-img {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-logo {
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--light-blue) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--navy-blue) 0%, var(--primary-blue) 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image-placeholder {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section img {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Service Icons */
+.service-icon {
+    color: var(--primary-blue);
+}
+
+.service-icon i {
+    font-size: 48px;
+    color: var(--primary-blue);
+}
+
+.service-icon-large {
+    color: var(--primary-blue);
+    flex-shrink: 0;
+}
+
+.feature-icon {
+    background-color: var(--primary-blue);
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--navy-blue);
+    border-color: var(--navy-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary {
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--black) !important;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--light-blue) !important;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 300px;
+        text-align: center;
+    }
+    
+    .hero-logo {
+        max-height: 80px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .display-6 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* Partners Section */
+.partners-section {
+    border-top: 1px solid #dee2e6;
+}
+
+.partner-logo {
+    max-height: 80px;
+    width: auto;
+    max-width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-link:hover .partner-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.partner-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
